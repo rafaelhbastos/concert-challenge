@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InitialPageComponent implements OnInit {
   textButton: string = 'Entrar'
+  buttonWidth: string = "300px"
   
   constructor() { }
 

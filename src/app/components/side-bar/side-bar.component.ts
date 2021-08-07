@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-side-bar',
@@ -6,10 +7,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-bar.component.sass']
 })
 export class SideBarComponent implements OnInit {
+  @Input('page') page: string = '';
+  
+  home: string = '';
+  user: string = '';
+  local: string = '';
 
-  constructor() { }
+  whichPage() {
+    if (this.page === 'Home') {
+      this.home = 'active';
+    }
+    else if (this.page === 'User') {
+      this.user = 'active';
+    }
+    else if (this.page === 'Local') {
+      this.local = 'active';
+    }
+  }
+
+  constructor() {}
 
   ngOnInit(): void {
+    this.whichPage()
   }
 
 }

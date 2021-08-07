@@ -1,1 +1,34 @@
-<p>side-bar works!</p>
+<div class="side-bar">
+  <div class="content">
+    <div class="logo">
+      <img src="../../../assets/img/logo.png" alt="Logo da página">
+      <p>Pear</p>
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <a [ngClass]="home" routerLink="/users">
+            <img src="../../../assets/img/home.png" alt="Logo da home">
+            <p>Início</p>
+          </a>
+        </li>
+        <li>
+          <a [ngClass]="user">
+            <img src="../../../assets/img/user.png" alt="Logo do usuário">
+            <p>Usuários</p>
+          </a>
+        </li>
+        <li>
+          <a [ngClass]="local">
+            <img src="../../../assets/img/local.png" alt="Logo do local">
+            <p>Locais</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="log-out">
+      <button><img src="../../../assets/img/logout.png" alt="Logo do sair"></button>
+      <p>Sair</p>
+    </div>
+  </div>
+</div>
