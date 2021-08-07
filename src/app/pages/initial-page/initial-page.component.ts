@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./initial-page.component.sass']
 })
 export class InitialPageComponent implements OnInit {
-  textButton: string = 'Press this button'
+  textButton: string = 'Entrar'
   
   constructor() { }
 
