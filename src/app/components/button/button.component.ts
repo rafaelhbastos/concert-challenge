@@ -12,7 +12,8 @@ export class ButtonComponent implements OnInit {
   @Input('value') textValue: string = '';
   @Input('btnStyle') buttonWidth: string = '';
   
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit(): void {
   }

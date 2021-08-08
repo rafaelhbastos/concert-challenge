@@ -1,2 +1,25 @@
-<app-side-bar [page] = "Page"></app-side-bar>
-<h1>essa merda works</h1>
+<div class="user-page">
+  <app-side-bar [page] = "Page"></app-side-bar>
+  <div class="content">
+    <h2 class="title">Usuários</h2>
+    <a routerLink = 'create'><app-button [value] = "textButton" [btnStyle] = "buttonWidth"></app-button></a>
+    <div class="table-title">
+      <ul>
+        <li><p>Nome</p></li>
+        <li><p>Email</p></li>
+        <li><p>Data de Nascimento</p></li>
+        <li><p>Cidade</p></li>
+        <li><p>Ações</p></li>
+      </ul>
+    </div>
+    <div class="table-content">
+      <ul>
+        <li><p>Rafael</p></li>
+        <li><p>rafaelhenribastos12@gmail.com</p></li>
+        <li><p>19/05/1998</p></li>
+        <li><p>João Monlevade</p></li>
+        <li><a class="edit"><button>Editar</button></a><a class="delete"><button>Apagar</button></a></li>
+      </ul>
+    </div>
+  </div>
+</div>

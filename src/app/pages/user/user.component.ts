@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user.component.sass']
 })
 export class UserComponent implements OnInit {
-  Page: string = 'User'
+  Page: string = 'User';
+  textButton: string = 'Novo Usuário';
+  buttonWidth: string = '150px';
 
   constructor() { }
 

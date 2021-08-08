@@ -1,5 +1,6 @@
 
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-side-bar',
@@ -8,7 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SideBarComponent implements OnInit {
   @Input('page') page: string = '';
-  
+
   home: string = '';
   user: string = '';
   local: string = '';
