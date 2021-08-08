@@ -1,4 +1,5 @@
 .user-form
+  position: relative 
   display: flex
   flex-wrap: wrap
   justify-content: space-between
@@ -26,7 +27,7 @@
       outline: none
   
   label#name
-    width: 45px  
+    width: 45px 
 
   #name
     width: 250px
@@ -118,3 +119,17 @@
     &:hover 
       filter: brightness(0.95)
 
+  span
+    display: none
+
+  .is-invalid
+    border: 2px solid #B83636
+
+  .required-fild-message
+    color: #B83636
+    position: absolute
+    font-size: 0.675rem
+    top: calc(0% + -70px)
+    left: calc(0% + 500px)
+    display: block
+  

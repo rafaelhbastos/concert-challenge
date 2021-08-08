@@ -6,6 +6,7 @@ import { InitialPageComponent } from './pages/initial-page/initial-page.componen
 import { AppComponent } from './app.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
+import { SucceedComponent } from './components/succeed/succeed.component';
 import { UserComponent } from './pages/user/user.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LocalComponent } from './pages/local/local.component';
@@ -24,7 +25,8 @@ import { EditUserComponent } from './pages/user/edit-user/edit-user.component';
     LocalComponent,
     SideBarComponent,
     ButtonComponent,
-    UserFormComponent
+    UserFormComponent,
+    SucceedComponent
   ],
   imports: [
     BrowserModule,
