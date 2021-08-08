@@ -6,8 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-user.component.sass']
 })
 export class CreateUserComponent implements OnInit {
-  Page: string = 'User'
-
+  Page: string = 'User';
+  ButtonContent: string = 'Cadastrar';
+  
   constructor() { }
 
   ngOnInit(): void {

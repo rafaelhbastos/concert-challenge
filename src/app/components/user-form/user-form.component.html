@@ -1,23 +1,34 @@
-<form class="user-form">
-  <label for="name">Nome</label>
+<form class="user-form" method="POST">
+  <label for="name" id="name">Nome:</label>
   <input type="text" id="name" name="name">
-  <label for="email">E-mail</label>
+  <label for="email" id="email">E-mail:</label>
   <input type="email" id="email" name="email">
-  <label for="birth">Data de nascimento</label>
+  <label for="birth" id="birth">Data de nascimento:</label>
   <input type="date" id="birth" name="birth">
-  <label for="city">Cidade</label>
+  <label for="city" id="city">Cidade:</label>
   <input type="text" id="city" name="city">
-  <label for="front-end">Front-End</label>
+  <label id="develop">Desenvolvedor:</label>
+  <label for="front-end" id="front-end">Front-End</label>
   <input type="radio" id="front-end" name="develop">
-  <label for="back-end">Back-End</label>
+  <label for="back-end" id="back-end">Back-End</label>
   <input type="radio" id="back-end" name="develop">
-  <label for="full-stack">Full Stack</label>
+  <label for="full-stack" id="full-stack">Full Stack</label>
   <input type="radio" id="full-stack" name="develop">
-  <input type="checkbox">
-  <label for="gender">Gênero</label>
+  <label id="hability">Habilidades:</label>
+  <label for="react" id="react">ReactJs</label>
+  <input type="checkbox" id="react" name="react">
+  <label for="node" id="node">NodeJs</label>
+  <input type="checkbox" id="node" name="node">
+  <label for="angular" id="angular">Angular</label>
+  <input type="checkbox" id="angular" name="angular">
+  <label for="vue" id="vue">VueJs</label>
+  <input type="checkbox" id="vue" name="vue">
+  <label for="gender" id="gender">Gênero:</label>
   <select name="gender" id="gender">
     <option value="Male">Masculino</option>
     <option value="Female">Feminino</option>
     <option value="Other">Outro</option>
   </select>
+  <a routerLink="../"><button class="cancel"> Cancelar</button></a>
+  <app-button [value] = "buttonText" [btnStyle] = "buttonWidth"></app-button>
 </form>
