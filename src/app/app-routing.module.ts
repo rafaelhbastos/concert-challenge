@@ -7,16 +7,28 @@ import { UserComponent } from './pages/user/user.component';
 import { LocalComponent } from './pages/local/local.component';
 import { CreateUserComponent } from './pages/user/create-user/create-user.component';
 import { EditUserComponent } from './pages/user/edit-user/edit-user.component';
+import { UserResolverGuard } from './guards/user-resolver.guard';
 import { CreateLocalComponent } from './pages/local/create-local/create-local.component';
 import { EditLocalComponent } from './pages/local/edit-local/edit-local.component';
 
-
 const routes: Routes = [
-  {path: '', component: InitialPageComponent},
-  {path: 'home', component: HomeComponent},
-  {path: 'user', component: UserComponent},
-  {path: 'user/create', component: CreateUserComponent},
-  {path: 'user/edit', component: EditUserComponent},
+  { path: '', component: InitialPageComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'user', component: UserComponent },
+  {
+    path: 'user/create',
+    component: CreateUserComponent,
+    resolve: {
+      user: UserResolverGuard,
+    },
+  },
+  {
+    path: 'user/edit/:id',
+    component: EditUserComponent,
+    resolve: {
+      user: UserResolverGuard,
+    },
+  },
   {path: 'local', component: LocalComponent},
   {path: 'local/create', component: CreateLocalComponent},
   {path: 'local/edit', component: EditLocalComponent}
@@ -24,6 +36,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

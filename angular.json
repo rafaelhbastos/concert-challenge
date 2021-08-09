@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "concert-challenge"
+    }
+  },
+  "defaultProject": "concert-challenge",
+  "cli": {
+    "analytics": false
+  }
 }

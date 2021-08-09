@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Rafael Bastos",
+      "email": "rafaelhenribastos12@gmail.com",
+      "birth": "19/05/1998",
+      "city": "João Monlevade",
+      "develop": "full-stack",
+      "react": true,
+      "node": true,
+      "angular": true,
+      "vue": false,
+      "gender": "Male"
+    }
+  ]
+}

@@ -1,35 +1,96 @@
-<form class="user-form" method="POST">
-  <span>*Campo Obrigatório</span>
+<form class="user-form needs-validation" novalidate [formGroup]="form">
+  <span [ngClass]="{ 'required-field-message': submitted && hasError() }"
+    >*Campo Obrigatório</span
+  >
   <label for="name" id="name">Nome:</label>
-  <input type="text" id="name" name="name">
+  <input
+    type="text"
+    id="name"
+    name="name"
+    formControlName="name"
+    [ngClass]="{ 'is-invalid': submitted && hasError('name') }"
+  />
   <label for="email" id="email">E-mail:</label>
-  <input type="email" id="email" name="email">
+  <input
+    type="email"
+    id="email"
+    name="email"
+    formControlName="email"
+    [ngClass]="{ 'is-invalid': submitted && hasError('email') }"
+  />
   <label for="birth" id="birth">Data de nascimento:</label>
-  <input type="date" id="birth" name="birth">
+  <input
+    type="date"
+    id="birth"
+    name="birth"
+    formControlName="birth"
+    [ngClass]="{ 'is-invalid': submitted && hasError('birth') }"
+  />
   <label for="city" id="city">Cidade:</label>
-  <input type="text" id="city" name="city">
+  <input
+    type="text"
+    id="city"
+    name="city"
+    formControlName="city"
+    [ngClass]="{ 'is-invalid': submitted && hasError('city') }"
+  />
   <label id="develop">Desenvolvedor:</label>
   <label for="front-end" id="front-end">Front-End</label>
-  <input type="radio" id="front-end" name="develop">
+  <input
+    type="radio"
+    id="front-end"
+    value="front-end"
+    name="develop"
+    formControlName="develop"
+    [ngClass]="{ 'is-invalid': submitted && hasError('develop') }"
+  />
   <label for="back-end" id="back-end">Back-End</label>
-  <input type="radio" id="back-end" name="develop">
+  <input
+    type="radio"
+    id="back-end"
+    value="back-end"
+    name="develop"
+    formControlName="develop"
+    [ngClass]="{ 'is-invalid': submitted && hasError('develop') }"
+  />
   <label for="full-stack" id="full-stack">Full Stack</label>
-  <input type="radio" id="full-stack" name="develop">
+  <input
+    type="radio"
+    id="full-stack"
+    value="full-stack"
+    name="develop"
+    formControlName="develop"
+    [ngClass]="{ 'is-invalid': submitted && hasError('develop') }"
+  />
   <label id="hability">Habilidades:</label>
   <label for="react" id="react">ReactJs</label>
-  <input type="checkbox" id="react" name="react">
+  <input type="checkbox" id="react" name="react" formControlName="react" />
   <label for="node" id="node">NodeJs</label>
-  <input type="checkbox" id="node" name="node">
+  <input type="checkbox" id="node" name="node" formControlName="node" />
   <label for="angular" id="angular">Angular</label>
-  <input type="checkbox" id="angular" name="angular">
+  <input
+    type="checkbox"
+    id="angular"
+    name="angular"
+    formControlName="angular"
+  />
   <label for="vue" id="vue">VueJs</label>
-  <input type="checkbox" id="vue" name="vue">
+  <input type="checkbox" id="vue" name="vue" formControlName="vue" />
   <label for="gender" id="gender">Gênero:</label>
-  <select name="gender" id="gender">
+  <select
+    name="gender"
+    id="gender"
+    formControlName="gender"
+    [ngClass]="{ 'is-invalid': submitted && hasError('gender') }"
+  >
     <option value="Male">Masculino</option>
     <option value="Female">Feminino</option>
     <option value="Other">Outro</option>
   </select>
-  <a routerLink="../"><button class="cancel"> Cancelar</button></a>
-  <app-button [value] = "buttonText" [btnStyle] = "buttonWidth"></app-button>
+  <button class="cancel" (click)="onCancel()">Cancelar</button>
+  <app-button
+    [value]="buttonText"
+    [btnStyle]="buttonWidth"
+    (click)="onSubmit()"
+  ></app-button>
 </form>
