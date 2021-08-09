@@ -40,8 +40,8 @@ export class InitialPageComponent implements OnInit {
     if (this.form.valid) {
       this.invalidData = false;
       if (
-        values.email === 'concert@technologies.com' &&
-        values.password === 'challenge'
+        values.email === 'concert' &&
+        values.password === 'prova'
       ) {
         this.router.navigate(['home']);
       } else {

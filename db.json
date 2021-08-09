@@ -12,6 +12,19 @@
       "angular": true,
       "vue": false,
       "gender": "Male"
+    },
+    {
+      "id": 2,
+      "name": "André Bastos",
+      "email": "andre@bastos.com",
+      "birth": "05/08/2021",
+      "city": "Belo Horizonte",
+      "develop": "back-end",
+      "react": true,
+      "node": false,
+      "angular": false,
+      "vue": false,
+      "gender": "Other"
     }
   ],
   "locals": [

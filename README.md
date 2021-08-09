@@ -51,7 +51,7 @@ Once you did it, you can open your browser and type "localhost:4200" and you'll 
   <img src="./src/assets/img/login-screenshot.png" alt="Login" width="600">
 </h1>
 
-For logging into the application, you have to fill the fields "email" and "senha" with "concert@technologies.com" and "challenge", respectively. 
+For logging into the application, you have to fill the fields "email" and "senha" with "concert" and "prova", respectively. 
 
 Once you did it, then you can navigate through the application. You can see some images bellow.
 
