@@ -1,27 +1,77 @@
-# ConcertChallenge
+<h1 align="center">
+  <br>
+  <img src="./src/assets/img/logo.png" alt="Logo" width="200">
+  <br>
+  Concert Technologies Challenge
+  <br>
+</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.15.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<p align="center">
+  <a href="#tecnologies">Tecnologies</a> •
+  <a href="#how-to-run">How To Run</a>
+</p>
 
-## Code scaffolding
+## Tecnologies
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular 9
+- Json-Server
 
-## Build
+## How To Run
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. After Node.js is installed, you'll have to install [Angular](https://angular.io/guide/setup-local) From your command line:
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+# Clone this repository
+$ git clone https://github.com/rafaelhbastos/concert-challenge
 
-## Running end-to-end tests
+# Install dependencies
+$ npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+After following all the steps, you are ready to run this application. First of all you'll have to open two different terminals in order to run the front-end and the back-end.
 
-## Further help
+ Starting with the server, you can run on your first terminal this command:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```bash
+$ npm run start:serve
+```
+
+After that, run on your second terminal the following command to start the application:
+
+```bash
+$ npm start
+```
+
+Once you did it, you can open your browser and type "localhost:4200" and you'll see the screen like the image bellow.
+
+<h1 align="center">
+  <img src="./src/assets/img/login-screenshot.png" alt="Product Hunt Viewer" width="1000">
+</h1>
+
+For logging into the application, you have to fill the fields "email" and "senha" with "concert@technologies.com" and "challenge", respectively. 
+
+Once you did it, then you can navigate through the application. You can see some images bellow.
+
+<h1 align="center">
+  <img src="./src/assets/img/user-screenshoot.png" alt="User" width="1000">
+</h1>
+
+<h1 align="center">
+  <img src="./src/assets/img/user-register-screenshoot.png" alt="User Registration" width="1000">
+</h1>
+
+<h1 align="center">
+  <img src="./src/assets/img/local-screenshoot.png" alt="Locales" width="1000">
+</h1>
+
+
+
+
+
+
+
+
+

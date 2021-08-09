@@ -1,8 +1,10 @@
 <div class="local-page">
-  <app-side-bar [page] = "Page"></app-side-bar>
+  <app-side-bar [page]="Page"></app-side-bar>
   <div class="content">
     <h2 class="title">Locais</h2>
-    <a routerLink = 'create'><app-button [value] = "textButton" [btnStyle] = "buttonWidth"></app-button></a>
+    <a routerLink="create"
+      ><app-button [value]="textButton" [btnStyle]="buttonWidth"></app-button
+    ></a>
     <div class="table-title">
       <ul>
         <li><p>Responsável</p></li>
@@ -12,14 +14,33 @@
         <li><p>Ações</p></li>
       </ul>
     </div>
-    <div class="table-content">
-      <ul>
-        <li><p>André</p></li>
-        <li><p>Belo Horizonte - MG</p></li>
-        <li><p>12</p></li>
-        <li><p>42</p></li>
-        <li><a class="edit" routerLink="edit"><button>Editar</button></a><a class="delete"><button>Apagar</button></a></li>
-      </ul>
+    <div *ngIf = "locals$ | async as locals; else loading">
+      <div class="table-content" *ngFor="let local of locals">
+        <ul>
+          <li>
+            <p>{{ local.responsable }}</p>
+          </li>
+          <li>
+            <p>{{ local.local }}</p>
+          </li>
+          <li>
+            <p>{{ local.opportunity }}</p>
+          </li>
+          <li>
+            <p>{{ local.employee }}</p>
+          </li>
+          <li>
+            <a class="edit" routerLink="edit" (click)="onEdit(local.id)"
+              ><button>Editar</button></a
+            ><a class="delete"
+              ><button (click)="onDelete(local.id)">Apagar</button></a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
+  <ng-template #loading>
+    <img class="loading" src="../../../assets/img/logo.png" alt="Logo">
+  </ng-template>
 </div>

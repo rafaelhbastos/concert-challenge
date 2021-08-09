@@ -24,27 +24,32 @@
         </li>
       </ul>
     </div>
-    <div class="table-content" *ngFor="let user of users$ | async">
-      <ul>
-        <li>
-          <p>{{ user.name }}</p>
-        </li>
-        <li>
-          <p>{{ user.email }}</p>
-        </li>
-        <li>
-          <p>{{ user.birth }}</p>
-        </li>
-        <li>
-          <p>{{ user.city }}</p>
-        </li>
-        <li>
-          <a class="edit"><button (click)="onEdit(user.id)">Editar</button></a>
-          <a class="delete" (click)="onDelete(user.id)"
-            ><button>Apagar</button></a
-          >
-        </li>
-      </ul>
+    <div *ngIf = "users$ | async as users; else loading">
+      <div class="table-content" *ngFor="let user of users">
+        <ul>
+          <li>
+            <p>{{ user.name }}</p>
+          </li>
+          <li>
+            <p>{{ user.email }}</p>
+          </li>
+          <li>
+            <p>{{ user.birth }}</p>
+          </li>
+          <li>
+            <p>{{ user.city }}</p>
+          </li>
+          <li>
+            <a class="edit"><button (click)="onEdit(user.id)">Editar</button></a>
+            <a class="delete" (click)="onDelete(user.id)"
+              ><button>Apagar</button></a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
+  <ng-template #loading>
+    <img class="loading" src="../../../assets/img/logo.png" alt="Logo">
+  </ng-template>
 </div>

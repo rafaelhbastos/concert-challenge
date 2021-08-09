@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { take } from 'rxjs/operators';
+import { delay, take } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { User } from './user';
@@ -12,7 +12,10 @@ export class UserService {
   constructor(private httpClient: HttpClient) {}
 
   list() {
-    return this.httpClient.get<User[]>(this.API);
+    return this.httpClient.get<User[]>(this.API)
+      .pipe(
+        delay(2000)
+      );
   }
 
   create(user: User) {

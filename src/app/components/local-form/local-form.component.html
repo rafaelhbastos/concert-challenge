@@ -1,18 +1,47 @@
-<form class="local-form" method="POST">
-  <span>*Campo Obrigatório</span>
+<form class="local-form needs-validation" novalidate [formGroup]="form">
+  <span [ngClass]="{ 'required-field-message': submitted && hasError() }">
+    *Campo Obrigatório
+  </span>
   <div class="res-local">
     <label for="responsable" id="responsable">Responsável:</label>
-    <input type="text" id="responsable" name="responsable">
+    <input
+      type="text"
+      id="responsable"
+      name="responsable"
+      formControlName="responsable"
+      [ngClass]="{ 'is-invalid': submitted && hasError('responsable') }"
+    />
     <label for="local" id="local">Local:</label>
-    <input type="text" id="local" name="local">
+    <input
+      type="text"
+      id="local"
+      name="local"
+      formControlName="local"
+      [ngClass]="{ 'is-invalid': submitted && hasError('local') }"
+    />
   </div>
   <div class="fund-emp">
-    <label for="oportunity" id="oportunity">Vagas Abertas:</label>
-    <input type="text" id="oportunity" name="oportunity">
+    <label for="opportunity" id="opportunity">Vagas Abertas:</label>
+    <input
+      type="text"
+      id="opportunity"
+      name="opportunity"
+      formControlName="opportunity"
+      [ngClass]="{ 'is-invalid': submitted && hasError('opportunity') }"
+    />
     <label for="employee" id="employee">Empregados:</label>
-    <input type="text" id="employee" name="employee">
+    <input
+      type="text"
+      id="employee"
+      name="employee"
+      formControlName="employee"
+      [ngClass]="{ 'is-invalid': submitted && hasError('employee') }"
+    />
   </div>
-  <a routerLink="../"><button class="cancel"> Cancelar</button></a>
-  <app-button [value] = "buttonText" [btnStyle] = "buttonWidth"></app-button>
+  <button class="cancel" (click)="onCancel()">Cancelar</button>
+  <app-button
+    [value]="buttonText"
+    [btnStyle]="buttonWidth"
+    (click)="onSubmit()"
+  ></app-button>
 </form>
-

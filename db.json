@@ -13,5 +13,14 @@
       "vue": false,
       "gender": "Male"
     }
+  ],
+  "locals": [
+    {
+      "id": 1,
+      "responsable": "Rafael",
+      "local": "Itabira",
+      "opportunity": "43",
+      "employee": "100"
+    }
   ]
 }

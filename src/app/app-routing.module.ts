@@ -10,6 +10,7 @@ import { EditUserComponent } from './pages/user/edit-user/edit-user.component';
 import { UserResolverGuard } from './guards/user-resolver.guard';
 import { CreateLocalComponent } from './pages/local/create-local/create-local.component';
 import { EditLocalComponent } from './pages/local/edit-local/edit-local.component';
+import { LocalResolveGuard } from './guards/local-resolver.guard';
 
 const routes: Routes = [
   { path: '', component: InitialPageComponent },
@@ -29,9 +30,21 @@ const routes: Routes = [
       user: UserResolverGuard,
     },
   },
-  {path: 'local', component: LocalComponent},
-  {path: 'local/create', component: CreateLocalComponent},
-  {path: 'local/edit', component: EditLocalComponent}
+  { path: 'local', component: LocalComponent },
+  {
+    path: 'local/create',
+    component: CreateLocalComponent,
+    resolve: {
+      local: LocalResolveGuard,
+    },
+  },
+  {
+    path: 'local/edit/:id',
+    component: EditLocalComponent,
+    resolve: {
+      local: LocalResolveGuard,
+    },
+  },
 ];
 
 @NgModule({

@@ -15,7 +15,7 @@ export class UserComponent implements OnInit {
   Page: string = 'User';
   textButton: string = 'Novo Usuário';
   buttonWidth: string = '150px';
-  users: User[];
+  // users: User[];
 
   users$: Observable<User[]>;
 

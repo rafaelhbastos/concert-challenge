@@ -4,12 +4,39 @@
         <img src="../../../assets/img/logo.png" alt="Logo da página">
       </div>
       <h2>Login</h2>
-      <form action="/home" method="POST">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email">
-        <label for="password">Senha</label>
-        <input type="password" id="password" name="password">
-        <app-button [value] = "textButton" [btnStyle] = "buttonWidth"></app-button>
+      <span 
+      [ngClass]="{ 'error-message': submitted && hasError() && !invalidData }" >
+      *Campos Obrigatórios
+    </span>
+      <span 
+      [ngClass]="{ 'error-message': submitted && invalidData }" >
+      Credenciais inválidas
+    </span>
+      <form class="user-form needs-validation" novalidate [formGroup]="form">
+        <label for="email"
+        [ngClass]="{ 'label-is-invalid': submitted && hasError('email') }">Email</label>
+        <input 
+        type="email"
+         id="email" 
+         name="email"
+         formControlName="email"
+        [ngClass]="{ 'is-invalid': submitted && hasError('email') }"
+         >
+        <label for="password"
+        [ngClass]="{ 'label-is-invalid': submitted && hasError('password') }"
+        >Senha</label>
+        <input 
+        type="password" 
+        id="password" 
+        name="password"
+        formControlName="password"
+        [ngClass]="{ 'is-invalid': submitted && hasError('password') }"
+        >
+        <app-button 
+        [value] = "textButton" 
+        [btnStyle] = "buttonWidth"
+        (click)="onSubmit()"
+        ></app-button>
       </form>
     </div>
 </div>

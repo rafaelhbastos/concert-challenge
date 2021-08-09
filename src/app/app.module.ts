@@ -35,10 +35,10 @@ import { LocalFormComponent } from './components/local-form/local-form.component
     LocalFormComponent,
   ],
   imports: [
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
