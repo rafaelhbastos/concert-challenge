@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SucceedComponent } from './succeed.component';
+import { LocalFormComponent } from './local-form.component';
 
-describe('SucceedComponent', () => {
-  let component: SucceedComponent;
-  let fixture: ComponentFixture<SucceedComponent>;
+describe('LocalFormComponent', () => {
+  let component: LocalFormComponent;
+  let fixture: ComponentFixture<LocalFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SucceedComponent ]
+      declarations: [ LocalFormComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SucceedComponent);
+    fixture = TestBed.createComponent(LocalFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

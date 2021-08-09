@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LocalComponent implements OnInit {
   Page: string = 'Local';
+  textButton: string = 'Novo Local';
+  buttonWidth: string = '150px';
   constructor() { }
 
   ngOnInit(): void {

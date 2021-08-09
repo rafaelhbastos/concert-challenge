@@ -1,0 +1,72 @@
+.local-form
+  position: relative 
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: center
+
+  span
+    display: none
+
+  .is-invalid
+    border: 2px solid #B83636
+
+  .required-fild-message
+    color: #B83636
+    position: absolute
+    font-size: 0.675rem
+    top: calc(0% + -70px)
+    left: calc(0% + 500px)
+    display: block
+
+  .cancel
+    font-size: 0.875rem
+    font-weight: 600
+    color: #fff
+    background: #B4B4B4
+    height: 50px
+    border: none
+    border-radius: 4px
+    cursor: pointer
+    width: 200px
+    transition: filter 0.3s
+    &:hover 
+      filter: brightness(0.95)  
+    
+  .res-local, .fund-emp
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    width: 100%
+    margin-bottom: 25px
+    align-items: center
+  
+  label
+    font-size: 1rem
+    font-weight: 600
+    font-family: Arial, Helvetica, sans-serif
+    color: #242424
+    margin-right: 5px
+  
+  input
+    margin-right: 15px
+    padding: 5px 10px
+    border: 1px solid #242424
+    border-radius: 4px
+    font-family: 'Nunito', sans-serif
+    cursor: pointer
+
+    &:focus
+      outline: none
+    
+  input#responsable
+    width: 250px
+  
+  input#local
+    width: 200px
+  
+  input#fundation
+    width: 200px
+  
+  input#employee
+    width: 150px
