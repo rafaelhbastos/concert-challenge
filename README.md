@@ -48,7 +48,7 @@ $ npm start
 Once you did it, you can open your browser and type "localhost:4200" and you'll see the screen like the image bellow.
 
 <h1 align="center">
-  <img src="./src/assets/img/login-screenshot.png" alt="Product Hunt Viewer" width="1000">
+  <img src="./src/assets/img/login-screenshot.png" alt="Login" width="1000">
 </h1>
 
 For logging into the application, you have to fill the fields "email" and "senha" with "concert@technologies.com" and "challenge", respectively. 
