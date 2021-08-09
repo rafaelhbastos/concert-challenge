@@ -48,7 +48,7 @@ $ npm start
 Once you did it, you can open your browser and type "localhost:4200" and you'll see the screen like the image bellow.
 
 <h1 align="center">
-  <img src="./src/assets/img/login-screenshot.png" alt="Login" width="1000">
+  <img src="./src/assets/img/login-screenshot.png" alt="Login" width="600">
 </h1>
 
 For logging into the application, you have to fill the fields "email" and "senha" with "concert@technologies.com" and "challenge", respectively. 
@@ -56,15 +56,15 @@ For logging into the application, you have to fill the fields "email" and "senha
 Once you did it, then you can navigate through the application. You can see some images bellow.
 
 <h1 align="center">
-  <img src="./src/assets/img/user-screenshoot.png" alt="User" width="1000">
+  <img src="./src/assets/img/user-screenshot.png" alt="User" width="600">
 </h1>
 
 <h1 align="center">
-  <img src="./src/assets/img/user-register-screenshoot.png" alt="User Registration" width="1000">
+  <img src="./src/assets/img/user-register-screenshot.png" alt="User Registration" width="600">
 </h1>
 
 <h1 align="center">
-  <img src="./src/assets/img/local-screenshoot.png" alt="Locales" width="1000">
+  <img src="./src/assets/img/local-screenshot.png" alt="Locales" width="600">
 </h1>
 
 
